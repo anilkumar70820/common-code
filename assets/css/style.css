@@ -1,0 +1,11 @@
+/* ========AOS DELAY SAME FOR ALL ON SMALL SCREEN TO US THIS CODE============  */
+
+@media (max-width: 992px) {
+  .aos_none {
+    /* transform: none !important;
+        opacity: 1 !important; */
+    transition-delay: 0.2s !important;
+  }
+}
+
+/* ========AOS DELAY SAME FOR ALL ON SMALL SCREEN TO US THIS CODE END============  */

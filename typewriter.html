@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .fs-1 {
+        font-size: 48px;
+    }
+
+    .d-inline {
+        display: inline;
+    }
+
+    .type {
+        color: #0000;
+        background:
+            linear-gradient(-90deg, #00DFFC 5px, #0000 0) 10px 0,
+            linear-gradient(#00DFFC 0 0) 0 0;
+        background-size: calc(var(--n)*1ch) 200%;
+        -webkit-background-clip: padding-box, text;
+        background-clip: padding-box, text;
+        background-repeat: no-repeat;
+        animation:
+            b .7s infinite steps(1),
+            t calc(var(--n)*.3s) steps(var(--n)) forwards;
+    }
+
+    @keyframes t {
+        from {
+            background-size: 0 200%
+        }
+    }
+
+    @keyframes b {
+        50% {
+            background-position: 0 -100%, 0 0
+        }
+    }
+</style>
+
+<body>
+    <div class="type fs-1 d-inline" style="--n:500">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum repellat vitae, voluptatum, sed debitis
+        laboriosam optio praesentium id ut explicabo obcaecati maiores, numquam nemo similique pariatur quo delectus.
+        Dolor quisquam quod ducimus et, suscipit rerum deserunt eveniet nam voluptate rem adipisci laboriosam eum odio
+        doloremque, dolore labore necessitatibus accusamus fuga voluptatibus magnam ullam. Asperiores nisi excepturi
+        tempore illo animi, perferendis eveniet impedit laborum in architecto dolorum dicta, enim fugiat ea magni est
+        eum distinctio? Recusandae magni inventore error sint nisi sed quia, maiores quaerat alias sapiente saepe
+        accusamus, totam similique eum natus cumque fuga sequi.
+    </div>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ===============QUESTIONS CSS============== */
+.questions_cards {
+  width: 552px;
+  padding: 30px 0px;
+  background: #fff;
+  box-shadow: -4px 17px 39px 0px rgba(0, 0, 0, 0.12);
+}
+.questions_button {
+  padding: 16px 70px;
+  background: var(
+    --Button-Linear,
+    linear-gradient(248deg, #b80fb6 -51.42%, #553581 66.54%)
+  );
+  border: none;
+}
+.questions_leftshadow_abs {
+  position: absolute;
+  left: 0;
+  top: 10%;
+}
+.questions_lefticon_abs {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+}
+.questions_rightshadow_abs {
+  position: absolute;
+  right: 0;
+  top: 16%;
+}
+.questions_righticon_abs {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* ===============QUESTIONS CSS END============== */
+
+/* ================SPONSORS CSS================ */
+.sponsors_ellipse {
+  width: 306px;
+  height: 306px;
+  border-radius: 306px;
+  opacity: 0.1;
+  filter: blur(25px);
+  background: var(
+    --Button-Linear,
+    linear-gradient(248deg, #b80fb6 -51.42%, #553581 66.54%)
+  );
+  position: absolute;
+  right: 1%;
+  top: 0;
+}
+.slick-dots li button:before {
+  width: 12px !important;
+  height: 8px !important;
+  /* background-color: #000000 !important; */
+  /* border-radius: 12px !important; */
+  content: "" !important;
+  border-radius: 41px !important;
+background: linear-gradient(248deg, rgba(184, 15, 182, 0.50) -51.42%, rgba(85, 53, 129, 0.50) 66.54%) !important;
+  opacity: 1 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  border-radius: 41px !important;
+  background: var(
+    --Button-Linear,
+    linear-gradient(248deg, #b80fb6 -51.42%, #553581 66.54%)
+  ) !important;
+  width: 20px !important;
+  height: 8px !important;
+}
+.slick-dots {
+  bottom: 0px !important;
+}
+.slick-dots li{
+  width: 20px !important;
+  height: 8px !important;
+}
+/* ================SPONSORS CSS END================ */
+/* ============FORM CSS============ */
+.form_bg {
+  background-image: url(../images/png/form_bg_img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.form_box {
+  padding: 27px 58px 58px 58px;
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  background: rgba(17, 17, 17, 0.5);
+  backdrop-filter: blur(11.5px);
+}
+input {
+  width: 100%;
+  height: 64px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-size: var(--fs-xsm);
+}
+.submit_btn {
+  padding: 16px 32px;
+  background: var(
+    --Button-Linear,
+    linear-gradient(248deg, #b80fb6 -51.42%, #553581 66.54%)
+  );
+  border: none;
+}
+/* ===============FORM CSS END=============== */
+/* ===============FOOTER CSS========== */
+.line {
+  width: 2px;
+  height: 11px;
+  opacity: 0.5;
+  background: #01639e;
+}
+/* ===============FOOTER CSS END========== */
+
+@media (max-width: 576px) {
+  .form_box {
+    padding: 27px;
+  }
+  .questions_cards {
+    width: 100%;
+    padding: 30px 30px;
+  }
+  .questions_button {
+    padding: 16px 32px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWSummit</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="./assets/style/style3.css" />
+    <link rel="stylesheet" href="./assets/style/root.css" />
+    <!-- ==========BOOTSTRAP LINK============ -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- ========SLICK SLIDER LINKS======== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- ==============QUESTIONS  SECTION================ -->
+    <section class="py-5 position-relative z-1">
+      <img
+        class="questions_leftshadow_abs z-n1 d-sm-block d-none"
+        src="./assets/images/svg/sponsor_bg_LeftShadow.svg"
+        alt="shadow"
+      />
+      <img
+        class="questions_lefticon_abs z-n1 d-sm-block d-none"
+        src="./assets/images/svg/sponsor_bg_Lefticon.svg"
+        alt="file_icon"
+      />
+      <img
+        class="questions_rightshadow_abs z-n1 d-sm-block d-none"
+        src="./assets/images/svg/sponsor_bg_RightShadow.svg"
+        alt="shadow"
+      />
+      <img
+        class="questions_righticon_abs z-n1 d-sm-block d-none"
+        src="./assets/images/svg/sponsor_bg_righticon.svg"
+        alt="icon"
+      />
+      <div
+        class="custom_container d-flex flex-md-row flex-column align-items-center gap-4 my-sm-5 pt-sm-4"
+      >
+        <div
+          class="questions_cards d-flex flex-column align-items-center me-md-2"
+        >
+          <h2 class="ff_barlow fw-semibold color_black fs_3xl mb-4 text-center">
+            Are you a Company?
+          </h2>
+          <div>
+            <button
+              class="color_white fw-semibold ff_barlow fs_lg questions_button"
+            >
+              BECOME A SPONSOR
+            </button>
+          </div>
+        </div>
+        <div class="questions_cards d-flex flex-column align-items-center">
+          <h2 class="ff_barlow fw-semibold color_black fs_3xl mb-4 text-center">
+            Are you an affiliate?
+          </h2>
+          <button
+            class="color_white fw-semibold ff_barlow fs_lg questions_button"
+          >
+            GET FREE INVITATION
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ============QUESTIONS SECTION END=============== -->
+    <!-- =============SPONSORS SECTION============ -->
+    <section class="py-5 position-relative z-1">
+      <div class="sponsors_ellipse d-sm-block d-none z-n1"></div>
+      <div class="custom_container mb-sm-5 pb-sm-3">
+        <h2 class="ff_barlow fw-semibold color_black fs_3xl mb-5 text-center">
+          AWSUMMIT DINNERS SPONSORS
+        </h2>
+        <div class="sponsors">
+          <div class="d-flex flex-column gap-lg-5 gap-4 mb-5">
+            <div class="row mb-lg-4 pb-lg-2">
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_media_cards.svg"
+                  alt="sponsor_media_cards"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_honeywell.svg"
+                  alt="sponsor_honeywell"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_trafficmanager.svg"
+                  alt="sponsor_trafficmanager"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_adSupply.svg"
+                  alt="sponsor_adSupply"
+                />
+              </div>
+            </div>
+            <div class="row mb-lg-4 pb-lg-2">
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_meetUp.svg"
+                  alt="sponsor_meetUp"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_loveADZ.svg"
+                  alt="sponsor_loveADZ"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_clickDealer.svg"
+                  alt="sponsor_clickDealer"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_conversionClub.svg"
+                  alt="sponsor_conversionClub"
+                />
+              </div>
+            </div>
+            <div class="row mb-lg-4 pb-lg-2">
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_datingLeads.svg"
+                  alt="sponsor_datingLeads"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_dropShip.svg"
+                  alt="sponsor_dropShip"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_maxweb.svg"
+                  alt="sponsor_maxweb"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_createrTraffic.svg"
+                  alt="sponsor_createrTraffic"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_benaughty.svg"
+                  alt="sponsor_benaughty"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_affiliatesUnight.svg"
+                  alt="sponsor_affiliatesUnight"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 mb-sm-0 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_streamRay.svg"
+                  alt="sponsor_streamRay"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-lg-end justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_ADSempire.svg"
+                  alt="sponsor_ADSempire"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-lg-5 gap-4 mb-5">
+            <div class="row mb-lg-4 pb-lg-2">
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_media_cards.svg"
+                  alt="sponsor_media_cards"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_honeywell.svg"
+                  alt="sponsor_honeywell"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_trafficmanager.svg"
+                  alt="sponsor_trafficmanager"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_adSupply.svg"
+                  alt="sponsor_adSupply"
+                />
+              </div>
+            </div>
+            <div class="row mb-lg-4 pb-lg-2">
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_meetUp.svg"
+                  alt="sponsor_meetUp"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_loveADZ.svg"
+                  alt="sponsor_loveADZ"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_clickDealer.svg"
+                  alt="sponsor_clickDealer"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_conversionClub.svg"
+                  alt="sponsor_conversionClub"
+                />
+              </div>
+            </div>
+            <div class="row mb-lg-4 pb-lg-2">
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_datingLeads.svg"
+                  alt="sponsor_datingLeads"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_dropShip.svg"
+                  alt="sponsor_dropShip"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_maxweb.svg"
+                  alt="sponsor_maxweb"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_createrTraffic.svg"
+                  alt="sponsor_createrTraffic"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_benaughty.svg"
+                  alt="sponsor_benaughty"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_affiliatesUnight.svg"
+                  alt="sponsor_affiliatesUnight"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 mb-sm-0 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_streamRay.svg"
+                  alt="sponsor_streamRay"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-lg-end justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_ADSempire.svg"
+                  alt="sponsor_ADSempire"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-lg-5 gap-4 mb-5">
+            <div class="row mb-lg-4 pb-lg-2">
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_media_cards.svg"
+                  alt="sponsor_media_cards"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_honeywell.svg"
+                  alt="sponsor_honeywell"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_trafficmanager.svg"
+                  alt="sponsor_trafficmanager"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_adSupply.svg"
+                  alt="sponsor_adSupply"
+                />
+              </div>
+            </div>
+            <div class="row mb-lg-4 pb-lg-2">
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_meetUp.svg"
+                  alt="sponsor_meetUp"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_loveADZ.svg"
+                  alt="sponsor_loveADZ"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_clickDealer.svg"
+                  alt="sponsor_clickDealer"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_conversionClub.svg"
+                  alt="sponsor_conversionClub"
+                />
+              </div>
+            </div>
+            <div class="row mb-lg-4 pb-lg-2">
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_datingLeads.svg"
+                  alt="sponsor_datingLeads"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_dropShip.svg"
+                  alt="sponsor_dropShip"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_maxweb.svg"
+                  alt="sponsor_maxweb"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-end"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_createrTraffic.svg"
+                  alt="sponsor_createrTraffic"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center justify-content-lg-start"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_benaughty.svg"
+                  alt="sponsor_benaughty"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_affiliatesUnight.svg"
+                  alt="sponsor_affiliatesUnight"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 mb-lg-0 mb-4 mb-sm-0 d-flex justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_streamRay.svg"
+                  alt="sponsor_streamRay"
+                />
+              </div>
+              <div
+                class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-lg-end justify-content-center"
+              >
+                <img
+                  src="./assets/images/svg/sponsor_ADSempire.svg"
+                  alt="sponsor_ADSempire"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============SPONSORS SECTION END============ -->
+    <!-- ==========FORM SECTION============ -->
+    <section class="form_bg py-5">
+      <div class="custom_container py-sm-5 my-sm-2">
+        <div class="form_box">
+          <h2 class="fs_3xl ff_barlow fw-semibold color_white text-center mb-3">
+            NEVER MISS AN UPDATE
+          </h2>
+          <p
+            class="fs_lg ff_jakarta fw-normal color_white text-center opacity-75"
+          >
+            Sign up for email updates and stay up to date
+          </p>
+          <form class="d-flex gap-3 mt-4 pt-2 flex-sm-row flex-column">
+            <input
+              class="w-100 bg-transparent ff_jakarta fs-xsm fw-normal opacity-75"
+              type="text"
+              placeholder="YOUR NANE"
+            />
+            <input
+              class="w-100 bg-transparent ff_jakarta fs-xsm fw-normal opacity-75"
+              type="email"
+              placeholder="EMAIL ADDRESS"
+            />
+          </form>
+          <div
+            class="d-flex align-items-center justify-content-between mt-4 pt-3 flex-sm-row flex-column gap-sm-0 gap-4"
+          >
+            <div class="d-flex align-items-center">
+              <img
+                class="me-2 pe-1"
+                src="/assets/images/svg/checkbox.svg"
+                alt="checkbox"
+              />
+              <p class="ff_jakarta fw-normal fs_xsm color_white mb-0">
+                I Agree With Terms & Conditions
+              </p>
+            </div>
+            <button class="submit_btn ff_barlow fs_lg fw-semibold color_white">
+              Submit
+            </button>
+          </div>
+          <div
+            class="d-flex gap-sm-3 align-items-center justify-content-center mt-4 pt-sm-3 flex-sm-row flex-column gap-2"
+          >
+            <p class="ff_barlow fw-normal color_white fs_2xl mb-0 text-center">
+              Join Our Online Communities
+            </p>
+            <div class="d-flex gap-3">
+              <a href="https://facebook.com" target="blank">
+                <img
+                  src="/assets/images/svg/form_fb_icon.svg"
+                  alt="facebook_icon"
+                />
+              </a>
+              <a href="https://telegram.com" target="blank">
+                <img
+                  src="/assets/images/svg/form_telegram_icon.svg"
+                  alt="telegram_icon"
+                />
+              </a>
+              <a href="https://instagram.com" target="blank">
+                <img
+                  src="/assets/images/svg/form_instagram_icon.svg"
+                  alt="instagram_icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==========FORM SECTION END========== -->
+    <!-- ==========FOOTER================= -->
+    <footer class="py-5">
+      <div class="custom_container mb-sm-2">
+        <div
+          class="d-flex justify-content-md-between align-items-center justify-content-center flex-wrap gap-3"
+        >
+          <div class="d-flex flex-column">
+            <img
+              class="mb-3"
+              src="./assets/images/svg/footer_logo.svg"
+              alt="logo"
+            />
+            <div class="d-flex align-items-center">
+              <p
+                class="ff_jakarta fw-normal color_black fs_xsm opacity-75 me-1 mb-0"
+              >
+                AWSummit Events
+              </p>
+              <span class="line"></span>
+              <p
+                class="ff_jakarta fw-normal color_black fs_xsm opacity-75 ms-1 mb-0"
+              >
+                Bucharest and lbiza
+              </p>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-center">
+            <div
+              class="d-flex align-items-center justify-content-center flex-wrap gap-sm-0 gap-2"
+            >
+              <a
+                class="ff_jakarta fw-normal color_black fs_xsm opacity-75 me-sm-2 pe-sm-1 text-decoration-none"
+                href="privacy"
+                >Privacy Policy
+              </a>
+              <span class="line d-sm-block d-none"></span>
+              <a
+                class="ff_jakarta fw-normal color_black fs_xsm opacity-75 ms-sm-2 ps-sm-1 me-sm-2 pe-sm-1 text-decoration-none"
+                href="terms"
+                >Terms and Conditions
+              </a>
+              <span class="line d-sm-block d-none"></span>
+              <a
+                class="ff_jakarta fw-normal color_black fs_xsm opacity-75 me-sm-2 pe-sm-1 ms-sm-2 ps-sm-1 text-decoration-none"
+                href="support"
+                >Billing Support
+              </a>
+              <span class="line d-sm-block d-none"></span>
+              <a
+                class="ff_jakarta fw-normal color_black fs_xsm opacity-75 ms-sm-2 ps-sm-1 text-decoration-none"
+                href="contact"
+                >Contact Us
+              </a>
+            </div>
+            <p
+              class="ff_jakarta fw-normal color_black fs_xsm opacity-75 text-cente mt-3 mt-sm-0"
+            >
+              <span
+                ><img
+                  src="./assets/images/svg/copyright.svg"
+                  alt="copyright" /></span
+              >2023-24. All Rights Reserved
+            </p>
+          </div>
+          <div class="d-flex gap-2 justify-content-center">
+            <a class="me-1" href="https://facebook.com"
+              ><img src="./assets/images/svg/facebook_icon.svg" alt="facebook"
+            /></a>
+            <a class="me-1" href="https://instagram.com"
+              ><img
+                src="./assets/images/svg/instagram_icon.svg"
+                alt="instagram"
+            /></a>
+            <a class="me-1" href="https://twitter.com"
+              ><img
+                src="./assets/images/svg/twitter_icon.svg"
+                alt="twitter_icon"
+            /></a>
+            <a class="me-1" href="https://linkedin.com"
+              ><img
+                src="./assets/images/svg/linkedin_icon.svg"
+                alt="linkedin_icon"
+            /></a>
+            <a href="https://linkedin.com"
+              ><img
+                src="./assets/images/svg/youtube_icon.svg"
+                alt="youtube_icon"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========FOOTER END================= -->
+
+    <!-- =====JQUERY LINK==== -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- =======SLICK JS LINK======= -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- ================BOOTSTRAP JS LINK============== -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(".sponsors").slick({
+        dots: true,
+        infinite: false,
+        speed: 3000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay:true,
+        infinite:true,
+        cssEase:"linear",
+        autoplaySpeed:0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ],
+      });
+    </script>
+  </body>
+</html>
+
+</body>
+</html>
